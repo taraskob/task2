@@ -31,9 +31,7 @@ public Files2() {
 		public void caretUpdate(CaretEvent ce) {
 			String str=jta.getText();
 			jlabMsg.setText("Current size: "+str.length());
-			AsyncData async=new AsyncData(str,jta);
-			Thread t=new Thread(async);
-			t.start();
+			new Filecontr(str,jta);
 			}
 	});
 	LoadSaveF lsF=new LoadSaveF();
